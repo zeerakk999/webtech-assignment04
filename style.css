@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f3f5;
+  color: #222;
+}
+
+.top {
+  background: linear-gradient(to right, #0c373b, #88e6ec);
+  color: #fff;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top h1 {
+  font-family: Roboto;
+  justify-content: center;
+  display: flex;
+  font-size: 40px;
+  margin: 0;
+  flex: 1;
+}
+
+#msg {
+  color: #9fe6a0;
+  font-size: 14px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 6px 14px;
+  border: 1px solid #7a8699;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #e6ecf5;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.wrap {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+.pane {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #ced0d2;
+  box-shadow: 0 1px 2px rgba(132, 130, 130, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.pane-title {
+  font-size: 13px;
+  margin: 0 0 8px;
+  color: #556;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+textarea {
+  width: 100%;
+  height: 430px;
+  padding: 10px;
+  border: 1px solid #d3d9e2;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.slide {
+  border: 1px solid #d3d9e2;
+  border-radius: 6px;
+  background: #fffdf6;
+  padding: 24px;
+  min-height: 330px;
+  overflow: auto;
+}
+
+.slide h1 {
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+
+.slide h2 {
+  font-size: 19px;
+  margin: 14px 0 8px;
+  color: #334;
+}
+
+.slide p {
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.count {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #667;
+}
+
+.present {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1c2333;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 12px;
+  z-index: 100;
+}
+
+.present.hidden {
+  display: none;
+}
+
+.present .slide {
+  flex: 1;
+  font-size: 18px;
+}
+
+.present .count {
+  color: #b9c3d6;
+}
+
+.present .close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}

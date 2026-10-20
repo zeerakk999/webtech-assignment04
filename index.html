@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slides App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top">
+    <h1>Slides App</h1>
+    <span id="msg"></span>
+    <button id="saveBtn">Save</button>
+    <button id="presentBtn">Present</button>
+  </div>
+
+  <div class="wrap">
+
+    <div class="pane">
+      <p class="pane-title">Markdown</p>
+      <textarea id="md" spellcheck="false"></textarea>
+    </div>
+
+    <div class="pane">
+      <p class="pane-title">Preview</p>
+      <div id="preview" class="slide"></div>
+      <div class="controls">
+        <button class="prev">&#8592; Left</button>
+        <button class="next">Right &#8594;</button>
+        <button class="fs">Full Screen</button>
+      </div>
+      <div id="previewCount" class="count">0 / 0</div>
+    </div>
+
+  </div>
+
+  <div id="present" class="present hidden">
+    <button class="close" id="closeBtn">Close</button>
+    <div id="presentSlide" class="slide"></div>
+    <div class="controls">
+      <button class="prev">&#8592; Left</button>
+      <button class="next">Right &#8594;</button>
+      <button class="fs">Full Screen</button>
+    </div>
+    <div id="presentCount" class="count">0 / 0</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
